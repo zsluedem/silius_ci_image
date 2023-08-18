@@ -18,6 +18,6 @@ ENV PATH="/root/.cargo/bin:$PATH"
 RUN cargo install cargo-sort cargo-udeps
 
 WORKDIR /silius_image
-COPY . .
+COPY ./silius .
 
 RUN make fetch-thirdparty && make setup-thirdparty && cargo build --workspace
